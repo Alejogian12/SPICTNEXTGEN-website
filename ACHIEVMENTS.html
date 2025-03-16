@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SP-ICT AI NEXT GEN - Achievements</title>
+    <style>
+        :root {
+            --box1-width: 380px;
+            --box1-height: 200px;
+            --box1-margin: 10px;
+            --box2-width: 200px;
+            --box2-height: 200px;
+            --box2-margin: 10px;
+            --box3-width: 1500px;
+            --box3-height: 500px;
+            --box3-margin: -160px; /* Adjusted margin */
+            --box4-width: 200px;
+            --box4-height: 200px;
+            --box4-margin: 10px;
+            --box5-width: 200px;
+            --box5-height: 200px;
+            --box5-margin: 10px;
+            --box6-width: 200px;
+            --box6-height: 200px;
+            --box6-margin: 10px;
+            --box7-width: 200px;
+            --box7-height: 200px;
+            --box7-margin: 10px;
+            --box8-width: 200px;
+            --box8-height: 200px;
+            --box8-margin: 10px;
+            --box9-width: 200px;
+            --box9-height: 200px;
+            --box9-margin: 10px;
+            --box10-width: 200px;
+            --box10-height: 200px;
+            --box10-margin: 10px;
+            --box11-width: 200px;
+            --box11-height: 200px;
+            --box11-margin-top: 20px;
+            --box11-margin-bottom: 20px;
+            --box12-width: 200px;
+            --box12-height: 200px;
+            --box12-margin-top: 20px;
+            --box12-margin-bottom: 20px;
+            --box13-width: 200px;
+            --box13-height: 200px;
+            --box13-margin-top: 20px;
+            --box13-margin-bottom: 20px;
+            --box14-width: 200px;
+            --box14-height: 200px;
+            --box14-margin-top: 20px;
+            --box14-margin-bottom: 20px;
+            --box15-width: 200px;
+            --box15-height: 200px;
+            --box15-margin-top: 20px;
+            --box15-margin-bottom: 20px;
+            --box16-width: 1500px;
+            --box16-height: 500px;
+            --box16-margin: -160px;
+            --box17-width: 200px;
+            --box17-height: 200px;
+            --box17-margin-top: 20px;
+            --box17-margin-bottom: 20px;
+            --box18-width: 200px;
+            --box18-height: 200px;
+            --box18-margin-top: 20px;
+            --box18-margin-bottom: 20px;
+            --box19-width: 200px;
+            --box19-height: 200px;
+            --box19-margin-top: 20px;
+            --box19-margin-bottom: 20px;
+            --box20-width: 200px;
+            --box20-height: 200px;
+            --box20-margin-top: 20px;
+            --box20-margin-bottom: 20px;
+        }
+        body {
+            background: linear-gradient(to right, #e5edf8, #0f5bff);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes scaleUp {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #eee4e4;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #47b2e4;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #0ff4fcb4;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #main {
+            transition: margin-left .4s;
+            padding: 16px;
+        }
+        @media screen and (max-height: 200px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 8px; /* Reduced gap */
+            padding: 20px;
+        }
+        .box {
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .box img {
+            max-width: 100%;
+            max-height: 150px;
+            border-radius: 5px;
+        }
+        .box h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+            color: #007BFF;
+        }
+        .box p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+        .box1, .box2, .box4, .box5 {
+            width: var(--box1-width);
+            height: var(--box1-height);
+            margin: var(--box1-margin);
+            grid-column: span 2;
+            grid-row: span 2;
+            margin-top: 100px;
+        }
+        .box6, .box7, .box8, .box9 {
+            width: var(--box1-width);
+            height: var(--box1-height);
+            margin: var(--box1-margin);
+            grid-column: span 2;
+            grid-row: span 2;
+            margin-top: 100px; /* Added margin-top to move boxes down */
+        }
+        .box3 {
+            width: var(--box3-width);
+            height: var(--box3-height);
+            margin: var(--box3-margin); /* Updated margin */
+            grid-column: 2 / span 8; /* Centered box 3 */
+            grid-row: span 1;
+            justify-content: center;
+            margin-bottom: -50px;
+        }
+        .box10 {
+            width: var(--box10-width);
+            height: var(--box10-height);
+            margin: var(--box10-margin);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box11 {
+            width: var(--box11-width);
+            height: var(--box11-height);
+            margin-top: var(--box11-margin-top);
+            margin-bottom: var(--box11-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box12 {
+            width: var(--box12-width);
+            height: var(--box12-height);
+            margin-top: var(--box12-margin-top);
+            margin-bottom: var(--box12-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box13 {
+            width: var(--box13-width);
+            height: var(--box13-height);
+            margin-top: var(--box13-margin-top);
+            margin-bottom: var(--box13-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box14 {
+            width: var(--box14-width);
+            height: var(--box14-height);
+            margin-top: var(--box14-margin-top);
+            margin-bottom: var(--box14-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box15 {
+            width: var(--box15-width);
+            height: var(--box15-height);
+            margin-top: var(--box15-margin-top);
+            margin-bottom: var(--box15-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box16 {
+            width: var(--box16-width);
+            height: var(--box16-height);
+            margin: var(--box16-margin);
+            grid-column: 2 / span 8;
+            grid-row: span 2;
+        }
+        .box17 {
+            width: var(--box17-width);
+            height: var(--box17-height);
+            margin-top: var(--box17-margin-top);
+            margin-bottom: var(--box17-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box18 {
+            width: var(--box18-width);
+            height: var(--box18-height);
+            margin-top: var(--box18-margin-top);
+            margin-bottom: var(--box18-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box19 {
+            width: var(--box19-width);
+            height: var(--box19-height);
+            margin-top: var(--box19-margin-top);
+            margin-bottom: var(--box19-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .box20 {
+            width: var(--box20-width);
+            height: var(--box20-height);
+            margin-top: var(--box20-margin-top);
+            margin-bottom: var(--box20-margin-bottom);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="SPICT MAIN.html">HOME</a>
+    <a href="GRADE 8 AI.html">GRADE8</a>
+    <a href="GRADE 9 WAKELET.html">GRADE9</a>
+    <a href="GRADE 10 CANVA.html">GRADE10</a>
+    <a href="ACHIEVMENTS.html">ACHIEVMENTS</a>
+    <a href="SPICT TEACHERS.html">SPICT TEACHERS</a>
+</div>
+
+<div id="main">
+    <header style="text-align: center; padding: 20px; background-color: #f0f0f0; border-bottom: 2px solid #007BFF; position: relative;">
+        <span style="font-size:30px;cursor:pointer; position: absolute; left: 20px;" onclick="openNav()">&#9776; Menu</span>
+        <a href="SPICT MAIN.html" style="text-decoration: none;">
+            <img src="logomain.jpg" alt="3" title="3" width="150" height="150" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); animation: scaleUp 2s ease-in-out;">
+        </a>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="box box1">
+            <img src="logomain.jpg" alt="Achievement 1">
+            <h3>Achievement Title 1</h3>
+            <p>Description of achievement 1.</p>
+        </div>
+        <div class="box box2">
+            <img src="logomain.jpg" alt="Achievement 2">
+            <h3>Achievement Title 2</h3>
+            <p>Description of achievement 2.</p>
+        </div>
+        <div class="box box4">
+            <img src="logomain.jpg" alt="Achievement 4">
+            <h3>Achievement Title 4</h3>
+            <p>Description of achievement 4.</p>
+        </div>
+        <div class="box box5">
+            <img src="logomain.jpg" alt="Achievement 5">
+            <h3>Achievement Title 5</h3>
+            <p>Description of achievement 5.</p>
+        </div>
+        <div class="box box3">
+            <img src="logomain.jpg" alt="Achievement 3">
+            <h3>Achievement Title 3</h3>
+            <p>Description of achievement 3.</p>
+        </div>
+        <div class="box box6">
+            <img src="logomain.jpg" alt="Achievement 6">
+            <h3>Achievement Title 6</h3>
+            <p>Description of achievement 6.</p>
+        </div>
+        <div class="box box7">
+            <img src="logomain.jpg" alt="Achievement 7">
+            <h3>Achievement Title 7</h3>
+            <p>Description of achievement 7.</p>
+        </div>
+        <div class="box box8">
+            <img src="logomain.jpg" alt="Achievement 8">
+            <h3>Achievement Title 8</h3>
+            <p>Description of achievement 8.</p>
+        </div>
+        <div class="box box9">
+            <img src="logomain.jpg" alt="Achievement 9">
+            <h3>Achievement Title 9</h3>
+            <p>Description of achievement 9.</p>
+        </div>
+        <div class="box box10">
+            <img src="logomain.jpg" alt="Achievement 10">
+            <h3>Achievement Title 10</h3>
+            <p>Description of achievement 10.</p>
+        </div>
+        <div class="box box11">
+            <img src="logomain.jpg" alt="Achievement 11">
+            <h3>Achievement Title 11</h3>
+            <p>Description of achievement 11.</p>
+        </div>
+        <div class="box box12">
+            <img src="logomain.jpg" alt="Achievement 12">
+            <h3>Achievement Title 12</h3>
+            <p>Description of achievement 12.</p>
+        </div>
+        <div class="box box13">
+            <img src="logomain.jpg" alt="Achievement 13">
+            <h3>Achievement Title 13</h3>
+            <p>Description of achievement 13.</p>
+        </div>
+        <div class="box box14">
+            <img src="logomain.jpg" alt="Achievement 14">
+            <h3>Achievement Title 14</h3>
+            <p>Description of achievement 14.</p>
+        </div>
+        <div class="box box15">
+            <img src="logomain.jpg" alt="Achievement 15">
+            <h3>Achievement Title 15</h3>
+            <p>Description of achievement 15.</p>
+        </div>
+        <div class="box box16">
+            <img src="logomain.jpg" alt="Achievement 16">
+            <h3>Achievement Title 16</h3>
+            <p>Description of achievement 16.</p>
+        </div>
+        <div class="box box17">
+            <img src="logomain.jpg" alt="Achievement 17">
+            <h3>Achievement Title 17</h3>
+            <p>Description of achievement 17.</p>
+        </div>
+        <div class="box box18">
+            <img src="logomain.jpg" alt="Achievement 18">
+            <h3>Achievement Title 18</h3>
+            <p>Description of achievement 18.</p>
+        </div>
+        <div class="box box19">
+            <img src="logomain.jpg" alt="Achievement 19">
+            <h3>Achievement Title 19</h3>
+            <p>Description of achievement 19.</p>
+        </div>
+        <div class="box box20">
+            <img src="logomain.jpg" alt="Achievement 20">
+            <h3>Achievement Title 20</h3>
+            <p>Description of achievement 20.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidebar").style.width = "400px";
+    document.getElementById("main").style.marginLeft = "400px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>

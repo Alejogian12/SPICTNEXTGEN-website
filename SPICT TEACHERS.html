@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEACHERS</title>
+    <style>
+        body {
+            background: url('cinematic-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes scaleUp {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        @keyframes moveLeft {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #47b2e4;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #0ff4fcb4;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #main {
+            transition: margin-left .4s;
+            padding: 16px;
+        }
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .box {
+            border: 3px solid #007BFF;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            padding: 10px;
+            position: relative;
+        }
+        .box:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+        }
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 5px;
+        }
+        .container .box:first-child {
+            grid-column: 1 / -1;
+            justify-self: center;
+            size: 50%;
+            width: 25%;
+        }
+        .container .box:nth-child(2) {
+            grid-column: 1 / -1;
+            justify-self: center;
+            size: 50%;
+            width: 25%;
+        }
+        .description {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 400px;
+            height: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            animation: slideIn 0.5s ease-in-out;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #fff;
+        }
+        .move-left {
+            animation: moveLeft 0.5s forwards;
+        }
+        .clicked {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .close-description {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .description-content {
+            margin-top: 20px;
+        }
+        .description h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .description p {
+            margin-bottom: 15px;
+        }
+        .description ul {
+            padding-left: 20px;
+        }
+        .description li {
+            margin-bottom: 5px;
+        }
+        .textbox {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            font-size: 20px; 
+            color: #333;
+            font-family: 'Times New Roman', serif; 
+            font-weight: bold; 
+            animation: fadeIn 2s ease-in-out;
+        }
+        .box-text {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            border: 2px solid #007BFF; 
+            padding: 10px; 
+            border-radius: 10px; 
+        }
+    </style>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="GRADE 7 Azure.html">GRADE7</a>
+    <a href="GRADE 8 AI.html">GRADE8</a>
+    <a href="GRADE 9 WAKELET.html">GRADE9</a>
+    <a href="GRADE 10 CANVA.html">GRADE10</a>
+    <a href="ACHIEVMENTS.html">ACHIEVMENTS</a>
+    <a href="SPICT TEACHERS.html">SPICT TEACHERS</a>
+</div>
+
+<div id="main">
+    <header style="text-align: center; padding: 20px; background-color: rgba(0, 0, 0, 0.8); border-bottom: 2px solid #007BFF; position: relative;">
+        <span style="font-size:30px;cursor:pointer; position: absolute; left: 20px;" onclick="openNav()">&#9776; Menu</span>
+        <a href="SPICT MAIN.html" style="text-decoration: none;">
+            <img src="logomain.jpg" alt="3" title="3" width="150" height="150" style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); animation: scaleUp 2s ease-in-out;">
+        </a>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="box" onclick="showDescription(this, '<h2>Catalina A. Salum</h2><p>Also known as the IV School Principal</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="SRNHS.jpg" alt="Image 1"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Flora B. Domingo</h2><p>Also known as the Head Teacher of Tle</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="flora.jpeg" alt="Image 2"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Jobelle D. Undan</h2><p>Also known as the Grade 7 Azure Adviser</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="jobelle.jpeg" alt="Image 3"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Mirasol M. Binuya</h2><p>Also known as the Grade 8 Artificial Intelligence Adviser</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="mira.jpeg" alt="Image 4"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Jerly Mae B. Maderia</h2><p>Also known as the Grade 9 Wakelet Adviser</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="jerly.jpeg" alt="Image 5"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Laarni G. Moneda</h2><p>Also known as the Grade 10 Canva Adviser</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="laarni.jpeg" alt="Image 6"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Brian Dick B. Maderia</h2><p>Also known as School SP-ICT Coordinator</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="brian.jpeg" alt="Image 7"></div>
+        <div class="box" onclick="showDescription(this, '<h2>Regine M. Ramos</h2><p>Also known as the Teacher in Web Design</p><ul><li>Feature 1</li><li>Feature 2</li></ul>')"><img src="regine.jpeg" alt="Image 8"></div>
+    </div>
+    <div id="description" class="description">
+        <button class="close-description" onclick="closeDescription()">Close</button>
+        <div id="description-text" class="description-content"></div>
+    </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+function showDescription(element, text) {
+    var descriptionDiv = document.getElementById('description');
+    var descriptionText = document.getElementById('description-text');
+    descriptionText.innerHTML = text;
+    descriptionDiv.style.display = 'block';
+    descriptionDiv.style.left = 'auto';
+    descriptionDiv.style.right = '20px';
+
+    var boxes = document.querySelectorAll('.box');
+    if (boxes[0] === element) {
+        element.classList.add('move-left');
+    }
+}
+
+function closeDescription() {
+    var descriptionDiv = document.getElementById('description');
+    descriptionDiv.style.display = 'none';
+
+    var boxes = document.querySelectorAll('.box');
+    boxes.forEach(function(box) {
+        box.classList.remove('move-left');
+    });
+}
+</script>
+</body>
+</html>
